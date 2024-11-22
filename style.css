@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: white; 
+}
+   .clock {
+    background: #16191e;
+    height: 320px;
+    width: 320px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 15px solid #242931;
+    box-shadow: 15px 15px 35px rgba(0, 0, 0, 0.2),
+        inset 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.clock {
+    position: relative;
+    background: #ffffff;
+    height: 340px;
+    width: 340px;
+    border-radius: 50%;
+    border: 15px solid #8c8b8b;
+    box-shadow: 15px 15px 35px rgba(0, 0, 0, 0.2), inset 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Hour markers */
+.hour-mark {
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background: #000000;
+    top: 5px;
+    left: 50%;
+    transform-origin: center 150px;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+/* Minute markers */
+.minute-mark {
+    position: absolute;
+    width: 3px;
+    height: 8px;
+    background: #000000;
+    top: 5px;
+    left: 50%;
+    transform-origin: center 150px;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+
+.hand {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(90deg); /* Initial position */
+    border-radius: 5px;
+}
+
+.hour-hand {
+    height: 100px;
+    width: 6px;
+    background: #cccccc;
+}
+
+.min-hand {
+    height: 110px;
+    width: 4px;
+    background: #cccccc;
+}
+
+.second-hand {
+    height: 120px;
+    width: 2px;
+    background: #ff0000;
+}
+
+/* Default (Light Mode) Styles */
+body {
+    background-color: white;
+    color: black;
+}
+
+.clock {
+    background: #ffffff;
+    border: 15px solid #cccccc;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.hour-mark,
+.minute-mark {
+    background: #000000;
+}
+
+.hour-hand,
+.min-hand {
+    background: #666666;
+}
+
+.second-hand {
+    background: #cc0000;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #16191e;
+    color: white;
+}
+
+body.dark-mode .clock {
+    background: #16191e;
+    border: 15px solid #242931;
+    box-shadow: 15px 15px 35px rgba(0, 0, 0, 0.2), inset 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .hour-mark,
+body.dark-mode .minute-mark {
+    background: #ffffff;
+}
+
+body.dark-mode .hour-hand,
+body.dark-mode .min-hand {
+    background: #cccccc;
+}
+
+body.dark-mode .second-hand {
+    background: #ff0000;
+}
+
+/* Button for toggling theme */
+.theme-toggle {
+    position: absolute;
+    top: 85%;
+    left: 46%;
+    padding: 10px 20px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 1000;
+}
+/* Switch darkmode*/
+body.dark-mode .theme-toggle {
+    background: #333333;
+    color: white;
+    border: 1px solid #555555;
+}
+
+.theme-toggle {
+    transition: all 0.2s ease;
+    background-color: black; 
+    color: #FFFFFF; 
+    border: none; 
+}
+/* Hover effect with button*/
+.theme-toggle:hover {
+    background-color: black; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); 
+    transform: scale(1.05); 
+}
+
